@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bingdeng.payment</groupId>
+  <artifactId>bd-pay</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>bd-alipay Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!--spring-boot web模块-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>1.5.8.RELEASE</version>
+    </dependency>
+
+    <!--spring 包-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>4.3.12.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>4.3.2.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-web</artifactId>
+      <version>4.0.2.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.3.2.RELEASE</version>
+    </dependency>
+
+    <!-- 使用JSP -->
+    <!-- <dependency>
+       <groupId>org.apache.tomcat.embed</groupId>
+       <artifactId>tomcat-embed-jasper</artifactId>
+       <scope>provided</scope>
+     </dependency>-->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-logging-juli</artifactId>
+      <version>8.0.23</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <version>8.0.46</version>
+      <!--使用下面这个时候，直接启动失败，报NoSuchMethodError: -->
+      <!--<artifactId>tomcat-embed-jasper</artifactId>
+      <version>9.0.1</version>-->
+    </dependency>
+    <!-- thymeleaf模板依赖.如果引入thymeleaf模板，那jsp的路径就不生效了，此时文件的路径在：resources/templates/.. -->
+    <!-- <dependency> <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency> -->
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <!--消息中间件 zbus-->
+    <!--<dependency>
+      <groupId>org.zbus</groupId>
+      <artifactId>zbus</artifactId>
+      <version>7.2.0</version>
+    </dependency>-->
+    <dependency>
+      <groupId>io.zbus</groupId>
+      <artifactId>zbus</artifactId>
+      <version>0.11.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.xiaoleilu</groupId>
+      <artifactId>hutool-all</artifactId>
+      <version>3.2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>3.17</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>1.1.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>1.1.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>2.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>com.springsource.org.apache.commons.httpclient</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>bd-pay</finalName>
+  </build>
+</project>
